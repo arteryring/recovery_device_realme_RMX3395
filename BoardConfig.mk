@@ -96,7 +96,7 @@ TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
 TW_NO_FASTBOOT_BOOT := true
 
-# TWRP Configuration
+#TWRP Configuration
 TW_THEME := portrait_hdpi
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 TW_EXTRA_LANGUAGES := false
@@ -112,9 +112,6 @@ TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
 TW_DEVICE_VERSION := AKS
 TW_INCLUDE_RESETPROP := true
-
-TARGET_SCREEN_HEIGHT := 2400
-TARGET_SCREEN_WIDTH := 1080
 
 #Excludes  
 TW_EXCLUDE_APEX := true
