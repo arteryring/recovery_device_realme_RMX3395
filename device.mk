@@ -73,7 +73,3 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 # Virtual A/B
 ENABLE_VIRTUAL_AB := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch.mk)
-
-TW_THEME := portrait_hdpi
-TARGET_SCREEN_HEIGHT := 2400
-TARGET_SCREEN_WIDTH := 1080
