@@ -97,7 +97,6 @@ TW_INCLUDE_FBE_METADATA_DECRYPT := true
 TW_NO_FASTBOOT_BOOT := true
 
 #TWRP Configuration
-TW_THEME := portrait_hdpi
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 TW_EXTRA_LANGUAGES := false
 TW_DEFAULT_LANGUAGE := en
