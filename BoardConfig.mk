@@ -125,4 +125,5 @@ TW_EXCLUDE_LPDUMP := true
 
 #pbrp config
 PB_GO := TRUE
+PB_DISABLE_DEFAULT_DM_VERITY := true
 
