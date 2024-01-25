@@ -113,6 +113,10 @@ TW_DEVICE_VERSION := AKS
 TW_INCLUDE_RESETPROP := true
 TW_THEME := portrait_hdpi
 
+#logs
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
+
 #Excludes  
 TW_EXCLUDE_APEX := true
 TW_EXCLUDE_PYTHON := true
