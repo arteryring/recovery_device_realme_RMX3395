@@ -17,7 +17,7 @@
 # 	
 # 	Please maintain this if you use this script or any part of it
 #
-FDEVICE="lavender"
+FDEVICE="RMX3395"
 
 fox_get_target_device() {
 local chkdev=$(echo "$BASH_SOURCE" | grep \"$FDEVICE\")
@@ -34,25 +34,13 @@ if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
 fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
-	export FOX_ENABLE_APP_MANAGER=1
-	export FOX_USE_BASH_SHELL=1
-	export FOX_ASH_IS_BASH=1
-	export FOX_USE_NANO_EDITOR=1
-	export FOX_USE_TAR_BINARY=1
-	export FOX_USE_ZIP_BINARY=1
-	export FOX_USE_SED_BINARY=1
-	export FOX_USE_XZ_UTILS=1
-        export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
+	export FOX_REMOVE_AAPT=1
+        export FOX_REMOVE_BUSYBOX_BINARY=1
+        export FOX_USE_GREP_BINARY=0
+        export FOX_USE_XZ_UTILS=0
+        export FOX_USE_SED_BINARY=0
+        export FOX_USE_TAR_BINARY=0
         
-        # dynamic/retrofitted
-	if [ "$FOX_USE_DYNAMIC_PARTITIONS" = "1" ]; then
-		export FOX_VANILLA_BUILD=1
-		export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
-		export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
-        	export OF_NO_ADDITIONAL_MIUI_PROPS_CHECK=1
-   		export OF_DISABLE_OTA_MENU=1
-   		export FOX_VARIANT="dynamic"
-	fi
 else
 	if [ -z "$FOX_BUILD_DEVICE" -a -z "$BASH_SOURCE" ]; then
 		echo "I: This script requires bash. Not processing the $FDEVICE $(basename $0)"
