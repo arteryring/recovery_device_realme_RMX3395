@@ -34,8 +34,6 @@ if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
 fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
-        export FOX_ASH_IS_BASH=1
-        export FOX_USE_BASH_SHELL=1
         export FOX_REMOVE_AAPT=1
         export FOX_REMOVE_BUSYBOX_BINARY=1
         export FOX_USE_GREP_BINARY=0
