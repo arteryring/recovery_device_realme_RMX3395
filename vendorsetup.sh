@@ -11,3 +11,5 @@ export OF_NO_SAMSUNG_SPECIAL=1
 export FOX_DRASTIC_SIZE_REDUCTION=1
 export FOX_REMOVE_BASH=1
 export FOX_REPLACE_BUSYBOX_PS=1
+export OF_FL_PATH1="/sys/class/leds/mt-flash-led1"
+export OF_FL_PATH1="/sys/class/leds/mt-flash-led2"
