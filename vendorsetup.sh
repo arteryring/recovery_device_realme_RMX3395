@@ -13,3 +13,6 @@ export FOX_REMOVE_BASH=1
 export FOX_REPLACE_BUSYBOX_PS=1
 export OF_FL_PATH1="/sys/class/leds/mt-flash-led1"
 export OF_FL_PATH1="/sys/class/leds/mt-flash-led2"
+export FOX_EXCLUDE_NANO_EDITOR=1
+export FOX_REMOVE_ZIP_BINARY=1
+export OF_MAINTAINER=1
