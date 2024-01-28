@@ -40,7 +40,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export FOX_USE_XZ_UTILS=0
         export FOX_USE_SED_BINARY=0
         export FOX_USE_TAR_BINARY=0
-        export OF_VANILLA_BUILD=1
+        export FOX_VANILLA_BUILD=1
         export OF_NO_SAMSUNG_SPECIAL=1
         export FOX_DRASTIC_SIZE_REDUCTION=1
         export FOX_REMOVE_BASH=1
