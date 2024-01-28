@@ -17,23 +17,6 @@
 # 	
 # 	Please maintain this if you use this script or any part of it
 #
-FDEVICE="RMX3395"
-
-fox_get_target_device() {
-local chkdev=$(echo "$BASH_SOURCE" | grep \"$FDEVICE\")
-   if [ -n "$chkdev" ]; then
-      FOX_BUILD_DEVICE="$FDEVICE"
-   else
-      chkdev=$(set | grep BASH_ARGV | grep \"$FDEVICE\")
-      [ -n "$chkdev" ] && FOX_BUILD_DEVICE="$FDEVICE"
-   fi
-}
-
-if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
-   fox_get_target_device
-fi
-
-if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_REMOVE_AAPT=1
 	export FOX_REMOVE_BUSYBOX_BINARY=1
 	export FOX_USE_GREP_BINARY=0
@@ -45,16 +28,10 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_DRASTIC_SIZE_REDUCTION=1
 	export FOX_REMOVE_BASH=1
 	export FOX_REPLACE_BUSYBOX_PS=1
-	export OF_FL_PATH1="/sys/class/leds/mt-flash-led1"
-	export OF_FL_PATH1="/sys/class/leds/mt-flash-led2"
+	export OF_FL_PATH1="/sys/class/flashlight/mt-flash-led1"
+	export OF_FL_PATH1="/sys/class/flashlight/mt-flash-led2"
 	export FOX_EXCLUDE_NANO_EDITOR=1
 	export FOX_REMOVE_ZIP_BINARY=1
 	export OF_MAINTAINER="AKS BRAR"
 	export FOX_EXTREME_SIZE_REDUCTION=1
-	fi
-else
-	if [ -z "$FOX_BUILD_DEVICE" -a -z "$BASH_SOURCE" ]; then
-		echo "I: This script requires bash. Not processing the $FDEVICE $(basename $0)"
-	fi
-fi
 #
