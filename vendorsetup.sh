@@ -15,5 +15,6 @@ export OF_FL_PATH1="/sys/class/leds/mt-flash-led1"
 export OF_FL_PATH1="/sys/class/leds/mt-flash-led2"
 export FOX_EXCLUDE_NANO_EDITOR=1
 export FOX_REMOVE_ZIP_BINARY=1
-export OF_MAINTAINER=1
+export OF_MAINTAINER="AKS BRAR"
 export FOX_EXTREME_SIZE_REDUCTION=1
+
