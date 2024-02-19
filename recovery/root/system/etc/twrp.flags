@@ -10,7 +10,7 @@
 /vbmeta_system            emmc      /dev/block/by-name/vbmeta_system                       flags=display=VBMeta_system;slotselect;backup=1;flashimg=1;slotselect
 
 # Removable Partitions
-/usb_otg                  auto     /dev/block/sdf              /dev/block/sdf1     flags=display="USB-OTG";storage;wipeingui;removable;backup=0
+/usb_otg                  auto     /dev/block/sdd              /dev/block/sdd1     flags=display="USB-OTG";storage;wipeingui;removable;backup=0
 
 # Other
 /protect_f                ext4      /dev/block/by-name/protect1                            flags=display=Protect_F;backup=1
